@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "${2}" = 'up' ]; then
+  if nmcli -g TYPE,NAME connection show --active | grep -qE '802-11-wireless:(WIFIonICE|DBLounge)'; then
+    pkill -f 'python.*db_wlan_manager/manager.py'
+    nohup python3 /usr/share/db_wlan_manager/manager.py >/var/log/dbwifi
+  fi
+fi
