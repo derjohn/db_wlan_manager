@@ -87,3 +87,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# debian package stuff
+network-manager/packagedir/
+network-manager/*.deb

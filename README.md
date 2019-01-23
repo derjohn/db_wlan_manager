@@ -30,3 +30,12 @@ If you connect with network-manager to a DB wifi, the tool will start in the bac
 
 ### Install Dependencies on Ubuntu
 ```sudo apt-get install python3 python3-bs4 python3-dnspython```
+
+### Debian package for network manager
+```
+cd network-manager
+make deb
+make install
+# This will create a packahe network-manager-db-wifi_0.1+..._amd64.deb
+sudo dpkg -i network-manager-db-wifi_0.1+..._amd64.deb
+```
