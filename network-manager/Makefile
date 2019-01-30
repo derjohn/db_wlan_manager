@@ -12,6 +12,9 @@ deb: check
 	rm -rf packagedir
 	mkdir -p packagedir/usr/share/db_wlan_manager/network-manager
 	cp network-manager-dbwifi packagedir/usr/share/db_wlan_manager/network-manager/
+	cp ../*.py packagedir/usr/share/db_wlan_manager
+	cp ../LICENSE packagedir/usr/share/db_wlan_manager
+	cp ../README.md packagedir/usr/share/db_wlan_manager
 	chmod 700 packagedir/usr/share/db_wlan_manager/network-manager/network-manager-dbwifi
 	mkdir -p packagedir/etc/NetworkManager/dispatcher.d
 	cd packagedir/etc/NetworkManager/dispatcher.d; ln -sf /usr/share/db_wlan_manager/network-manager/network-manager-dbwifi 10-dbwifi
